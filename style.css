@@ -2,37 +2,104 @@ body
 {
     background-image: url(WBVk.gif);
     background-repeat:repeat;
-    color: blueviolet;
+    color: white;
     display: grid;
     grid-template-columns:15% 70% 15%;
-    height: 850px;
+    height: 2500px;
     grid-template-areas: ". pojemnik ."
                          ". pojemnik ."
-                         ". pojemnik .";
+                         ". pojemnik kot";
     margin: auto;
 }
-div{border: solid white 1px;}
+
+div:not(#pojemnik, #stopka, #menu)
+{
+    margin: 5px;
+    background-color: rgba(119,136,153,0.5);
+}
 
 #pojemnik
 {
     grid-area:pojemnik;
-    /*background-color: floralwhite;*/
     display: grid;
-    grid-template-columns:10% 80% 10%;
-    grid-template-rows:15% 5% 75% 15%;
+    grid-template-columns:15% 70% 15%;
+    grid-template-rows:150px 100px 2200px 100px;
     grid-template-areas: "gora gora gora"
                          "menu menu menu"
                          "lewo srod praw"
                          "stop stop stop";
 }
+
 #logo
 {
-    margin-top: 20px;
-    pointer-events: none;
+    width: 1200px;
+    height: 115px;
 }
-#gora{grid-area:gora ;}
-#menu{grid-area:menu ;}
-#lewo{grid-area:lewo ;}
-#srodek{grid-area:srod ;}
-#prawo{grid-area:praw ;}
-#stopka{grid-area:stop ;}
+
+#gora
+{
+    grid-area:gora ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu
+{
+    grid-area:menu ;
+    display: inline-flex; 
+    justify-content: space-evenly;
+}
+
+#lewo
+{
+    grid-area:lewo ;
+}
+
+#srodek
+{
+    grid-area:srod ;
+}
+
+#prawo
+{
+    grid-area:praw ;
+}
+
+#stopka
+{
+    grid-area:stop ;
+    background-color: rgba(0, 0, 86, 0.5);
+}
+
+.button
+{
+    width: 24.5%;
+    height: 90%;
+    border: 0px;
+    border-radius: 2px;
+    background-color: rgba(86, 0, 167, 0.5);
+    color: white;
+    cursor:pointer;
+    box-shadow: 0 4px #999;
+}
+
+.button:hover
+{
+    background-image:url(6.gif);
+
+    background-size:cover;
+}
+
+.button:active {
+    background-image:url(6.gif);
+
+    background-size:cover;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+#stoopid
+{
+    grid-area: kot;
+}
