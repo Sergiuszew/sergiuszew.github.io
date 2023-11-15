@@ -1,0 +1,38 @@
+body
+{
+    background-image: url(WBVk.gif);
+    background-repeat:repeat;
+    color: blueviolet;
+    display: grid;
+    grid-template-columns:15% 70% 15%;
+    height: 850px;
+    grid-template-areas: ". pojemnik ."
+                         ". pojemnik ."
+                         ". pojemnik .";
+    margin: auto;
+}
+div{border: solid white 1px;}
+
+#pojemnik
+{
+    grid-area:pojemnik;
+    /*background-color: floralwhite;*/
+    display: grid;
+    grid-template-columns:10% 80% 10%;
+    grid-template-rows:15% 5% 75% 15%;
+    grid-template-areas: "gora gora gora"
+                         "menu menu menu"
+                         "lewo srod praw"
+                         "stop stop stop";
+}
+#logo
+{
+    margin-top: 20px;
+    pointer-events: none;
+}
+#gora{grid-area:gora ;}
+#menu{grid-area:menu ;}
+#lewo{grid-area:lewo ;}
+#srodek{grid-area:srod ;}
+#prawo{grid-area:praw ;}
+#stopka{grid-area:stop ;}
